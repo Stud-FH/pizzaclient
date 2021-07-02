@@ -13,19 +13,262 @@
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.BaseContainer {
+  height: 100%;
+  width: 100vw;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: flex-start;
+  background-color: #282c34;
   color: white;
+  overflow: scroll;
+}
+
+.NavbarContainer {
+  width: 100vw;
+  height: 75px;
+  minHeight: 75px;
+  background-color: #333e00;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+}
+
+.SidebarContainer {
+  position: absolute;
+  align-self: flex-end;
+  width: 500px;
+  max-width: 90vw;
+  height: calc(100% - 75px);
+  background-color: #21282f;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  overflow: scroll;
+  transition: all 0.5s ease;
+}
+
+.MenuContainer {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
 }
 
 .App-link {
   color: #61dafb;
+}
+
+.InputField {
+  width: 100%;
+  height: 35px;
+  border: none;
+  background: #fef8dd;
+  border-radius: 4px;
+  padding-left: 15px;
+}
+
+.Button {
+  padding: 6px;
+  font-weight: 700;
+  font-size: 15px;
+  text-align: center;
+  color: rgba(255, 255, 255, 1);
+  height: 35px;
+  width: 100px;
+  border: none;
+  border-radius: 3px;
+  background: #383c4a;
+  margin: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.Button:disabled {
+  opacity: 0.4;
+  cursor: default;
+  transition: all 1000000000s ease;
+}
+
+.Button:hover {
+  background-color: #74b72e;
+}
+
+.Button.Ingredient {
+  width: auto;
+  margin: 0px 3px;
+}
+
+.Button.Ingredient:hover {
+  background-color: #660000;
+}
+
+.Button.Wide {
+  width: 100%;
+  margin: 0px;
+}
+
+.Button.Delete:hover {
+  background-color: #ff0000;
+}
+
+Button.LinkLabel {
+  margin: 0px 0px 0px 10px;
+  text-align: left;
+  width: inherit;
+  background-color: transparent;
+}
+
+Button.LinkLabel:hover {
+  color: #74b72e;
+  padding-left: 10px;
+  background-color: transparent;
+}
+
+.ImageButton {
+  padding: 6px;
+  font-weight: 700;
+  font-size: 15px;
+  text-align: center;
+  color: #fff;
+  height: 75px;
+  width: 75px;
+  margin: 0;
+  padding: 0;
+  border: none;
+  border-radius: 3px;
+  background-color: transparent;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  image-rendering: auto;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.ImageButton:disabled {
+  opacity: 0.4;
+  cursor: default;
+  transition: all 1000000000s ease;
+}
+
+.ImageButton:hover {
+  background-color: rgba(255,255,255,0.2);
+}
+
+.Label {
+  font-size: 16px;
+  color: #fff;
+  display: table-cell;
+  text-align: left;
+  vertical-align: middle;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-top: 10px;
+  margin: 0px;
+}
+
+.NavigationInfo {
+  padding: 6px;
+  margin: 0px 0px 0px 10px;
+  font-size: 15px;
+  font-weight: bold;
+  color: #fff;
+  display: table-cell;
+  text-align: left;
+  vertical-align: middle;
+}
+
+.NavigationSubtitle {
+  padding: 6px;
+  margin: 15px 0px 0px 10px;
+  font-size: 15px;
+  font-weight: bold;
+  color: #fff;
+  text-decoration-line: underline;
+  display: table-cell;
+  text-align: left;
+  vertical-align: middle;
+}
+
+.TooltipText {
+  font-size: 16px;
+  color: black;
+  background-color: white;
+  display: table-cell;
+  text-align: left;
+  vertical-align: middle;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 0;
+  border: 1px solid black;
+}
+
+.AppTitle {
+  font-size: 48px;
+  color: #f5ffde;
+  font-family: "Pristina";
+  display: table-cell;
+  text-align: left;
+  vertical-align: middle;
+  padding: 0px;
+  margin: 0px;
+  text-shadow: 3px 3px #282c34;
+}
+
+.PizzaLabel {
+  font-size: 32px;
+  color: #fff;
+  display: table-cell;
+  text-align: left;
+  vertical-align: middle;
+  padding: 5px;
+  margin: 0;
+}
+
+.IngredientLabel {
+  font-size: 16px;
+  color: #ffffaa;
+  display: table-cell;
+  text-align: left;
+  vertical-align: middle;
+  padding: 5px;
+  margin: 0;
+}
+
+.PriceLabel {
+  font-size: 20px;
+  color: #fff;
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+  padding: 5px;
+  margin: 0;
+}
+
+.DefaultLabel {
+  font-size: 24px;
+  color: #fff;
+  display: table-cell;
+  text-align: left;
+  vertical-align: middle;
+  margin: 0;
+}
+
+.Box {
+  padding: 6px;
+  font-weight: 700;
+  font-size: 15px;
+  text-align: center;
+  color: rgba(255, 255, 255, 1);
+  width: auto;
+  border: none;
+  border-radius: 3px;
+  background: #383c4a;
+  margin: 3px;
+  transition: all 0.3s ease;
 }
 
 @keyframes App-logo-spin {
